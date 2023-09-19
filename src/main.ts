@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
+//引入公共样式
+import './styles/default.css'
 import App from './App.vue'
 import router from './router'
 //引入全局注册

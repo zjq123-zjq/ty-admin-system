@@ -4,10 +4,7 @@ import { ref } from 'vue'
 //引入组件类型
 import type { ComponentMap } from './types/login-type'
 
-//引入组件
-import PhoneCodeForm from './components/PhoneCodeForm.vue'
-import AccountForm from './components/AccountForm.vue'
-import QcodeForm from './components/QcodeForm.vue'
+import { PhoneCodeForm, AccountForm, QcodeForm } from './components'
 //渐变背景
 const bgColor = 'linear-gradient(0deg, #2196f3, #00bcd4, #00bcd4, #03a9f4)'
 const loginPaneWidth = '800px'
@@ -20,7 +17,7 @@ const tabList = ref<ComponentMap[]>([
 ])
 
 const currentTab = ref(0)
-
+//切换组件
 const changeTab = (index: number) => {
   currentTab.value = index
 }
@@ -110,6 +107,10 @@ const changeTab = (index: number) => {
             color: red;
           }
         }
+      }
+
+      .tabs-content {
+        padding: 10px 30px;
       }
     }
   }

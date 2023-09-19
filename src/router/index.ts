@@ -7,6 +7,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: () => import('../views/Login/index.vue')
+    },
+    {
+      path: '/ResetPwd',
+      name: 'ResetPwd',
+      component: () => import('../views/ResetPwd/index.vue')
     }
   ]
 })
